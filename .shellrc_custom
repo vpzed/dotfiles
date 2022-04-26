@@ -1,0 +1,33 @@
+
+# Extra Aliases
+alias ll='ls -lF'
+alias la='ls -aF'
+alias lf='ls -laF'
+
+# Aliases for Windows typos
+alias copy='cp'
+alias dir='ls'
+alias rename='mv'
+alias del='rm'
+
+# Shortcuts
+alias fshot='/usr/bin/flameshot gui -d 3000 -p ~/Pictures'
+alias frdp='/usr/bin/xfreerdp /cert-ignore /log-level:ERROR /size:90%w +auto-reconnect /auto-reconnect-max-retries:3'
+alias estrip='grep -Ev "^#|^\s*#|^$"'
+
+# Paths
+if [ -d ~/local/node/bin ] ; then
+    export PATH=~/local/node/bin:$PATH
+fi
+if [ -d ~/.local/bin ] ; then
+    export PATH=~/.local/bin:$PATH
+fi
+
+# Settings
+HISTSIZE=10000
+SAVEHIST=50000
+bindkey -v
+export EDITOR=vim
+
+# For dotnet
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
